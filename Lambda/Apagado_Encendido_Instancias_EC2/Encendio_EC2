@@ -2,7 +2,7 @@ import boto3
 
 def lambda_handler(event, context):
     region = 'us-east-1'  # Reemplaza con tu región
-    instances = ['i-0f9c8fcb86755121f']  # Lista de IDs de instancias, cada instancia va entre '' y separados por comas 
+    instances = ['i-0f9c8fcb86755121f']  # Lista de IDs de instancias, cada instancia va entre 
 
     ec2 = boto3.client('ec2', region_name=region)
 
@@ -28,3 +28,4 @@ def lambda_handler(event, context):
     except Exception as e:
         print(f"Error al iniciar instancias: {str(e)}")
         return {"status": "error", "message": str(e)}
+
